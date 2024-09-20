@@ -43,9 +43,11 @@ namespace Aula01
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(856, 420);
+			this.KeyPreview = true;
 			this.Name = "MainForm";
 			this.Text = "Aula01";
 			this.Load += new System.EventHandler(this.MainFormLoad);
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainFormKeyDown);
 			this.ResumeLayout(false);
 
 		}
