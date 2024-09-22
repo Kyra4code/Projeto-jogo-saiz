@@ -9,7 +9,7 @@ namespace Aula01
 	{
 		public Herói()
 		{
-			this.Load("Gargoyle.gif");
+			this.Load("Personagens/Gargoyle.gif");
 			this.Height = 70;
 			this.Width = 70;
 			this.SizeMode = PictureBoxSizeMode.StretchImage;

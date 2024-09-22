@@ -14,3 +14,11 @@ C:\Users\aluno\Downloads\Aula01\Aula01\obj\Debug\Aula01.MainForm.resources
 C:\Users\aluno\Downloads\Aula01\Aula01\obj\Debug\Aula01.csproj.GenerateResource.Cache
 C:\Users\aluno\Downloads\Aula01\Aula01\obj\Debug\Aula01.exe
 C:\Users\aluno\Downloads\Aula01\Aula01\obj\Debug\Aula01.pdb
+C:\Users\lugia\Documents\Escolar\Etec\C#\Projeto-jogo-saiz\Aula01\bin\Debug\Aula01.exe.config
+C:\Users\lugia\Documents\Escolar\Etec\C#\Projeto-jogo-saiz\Aula01\bin\Debug\Aula01.exe
+C:\Users\lugia\Documents\Escolar\Etec\C#\Projeto-jogo-saiz\Aula01\bin\Debug\Aula01.pdb
+C:\Users\lugia\Documents\Escolar\Etec\C#\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.csprojResolveAssemblyReference.cache
+C:\Users\lugia\Documents\Escolar\Etec\C#\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.MainForm.resources
+C:\Users\lugia\Documents\Escolar\Etec\C#\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.csproj.GenerateResource.Cache
+C:\Users\lugia\Documents\Escolar\Etec\C#\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.exe
+C:\Users\lugia\Documents\Escolar\Etec\C#\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.pdb
