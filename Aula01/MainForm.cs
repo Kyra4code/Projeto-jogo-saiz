@@ -12,32 +12,34 @@ namespace Aula01
 			InitializeComponent();
 		}
 		
-		Herói herio = new Herói();
+		public static PictureBox telaFundo = new PictureBox();
+		
+		Herói heroi = new Herói();
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
-			herio.Parent = this;
-			herio.Left = 20;
-			herio.Top = 20;
+			//Carregamento do fundo.
+			telaFundo.Parent = this;
+			telaFundo.Load("Cenarios/cenario0.gif");
+			telaFundo.Height = this.Height;
+			telaFundo.Width = this.Width;
+			telaFundo.SizeMode = PictureBoxSizeMode.StretchImage;
+			
 		}
 		void MainFormKeyDown(object sender, KeyEventArgs e)
 		{
 			if(e.KeyCode == Keys.D){
-				herio.Left += 15;
+				heroi.moveDir();
 			}
 			else if(e.KeyCode == Keys.A){
-				herio.Left -= 15;
+				heroi.moveEsq();
 			}
 			else if(e.KeyCode == Keys.S){
-				herio.Top += 15;
+				heroi.moveTop();
 			}
 			else if(e.KeyCode == Keys.W){
-				herio.Top -= 15;
+				heroi.moveChao();
 			}
-			if(e.KeyCode == Keys.D && e.KeyCode == Keys.LShiftKey){
-				herio.Left += 100;
-			}
-			
 		}
 		
 	}
