@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Timers;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -6,7 +7,7 @@ using System.Windows.Forms;
 namespace Aula01
 {
 	public partial class MainForm : Form
-	{
+	{		
 		public MainForm()
 		{
 			InitializeComponent();
@@ -15,6 +16,8 @@ namespace Aula01
 		public static PictureBox telaFundo = new PictureBox();
 		
 		Herói heroi = new Herói();
+		TiroHeroi th = new TiroHeroi();
+		
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
@@ -39,6 +42,13 @@ namespace Aula01
 			}
 			else if(e.KeyCode == Keys.W){
 				heroi.moveChao();
+			}
+			
+			if(e.KeyCode == Keys.Space){
+				th.Visible = true;
+				th.Left = heroi.Left + 70;
+				th.Top = heroi.Top + 10;
+				
 			}
 		}
 		
