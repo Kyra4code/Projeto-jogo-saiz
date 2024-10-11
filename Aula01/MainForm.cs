@@ -44,7 +44,7 @@ namespace Aula01
 			}
 			
 			if(e.KeyCode == Keys.Space){
-				heroi.tiroH()
+				heroi.tiroH();
 			}
 		}
 		
