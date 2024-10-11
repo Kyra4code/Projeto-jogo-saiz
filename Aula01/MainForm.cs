@@ -16,12 +16,10 @@ namespace Aula01
 		public static PictureBox telaFundo = new PictureBox();
 		
 		Herói heroi = new Herói();
-		TiroHeroi th = new TiroHeroi();
-		
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
-			//Carregamento do fundo.
+			//Carregamento e configuração do Background
 			telaFundo.Parent = this;
 			telaFundo.Load("Cenarios/cenario0.gif");
 			telaFundo.Height = this.Height;
@@ -31,6 +29,7 @@ namespace Aula01
 		}
 		void MainFormKeyDown(object sender, KeyEventArgs e)
 		{
+			//Configuração da interação das teclas com o executável
 			if(e.KeyCode == Keys.D){
 				heroi.moveDir();
 			}
@@ -45,10 +44,7 @@ namespace Aula01
 			}
 			
 			if(e.KeyCode == Keys.Space){
-				th.Visible = true;
-				th.Left = heroi.Left + 70;
-				th.Top = heroi.Top + 10;
-				
+				heroi.tiroH()
 			}
 		}
 		

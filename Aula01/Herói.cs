@@ -15,8 +15,18 @@ namespace Aula01
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
 		}
+
+
+		public void tiroH(){
+			//Uma instância herói é carregada e configurada.
+			TiroHeroi th = new TiroHeroi();
+			th.Visible = true;
+			th.Left = Left + 70;
+			th.Top = Top + 10;
+		}
 		
 		public void moveDir(){
+			//Movimmento da lateral direita do personagem herói
 			Left += speed;
 			
 			if(Left >= 1300){
@@ -28,6 +38,7 @@ namespace Aula01
 			}
 		}
 		public void moveEsq(){
+			//Movimmento da lateral esquerda do personagem herói
 			Left -= speed;
 			
 			if(Left <= 0){
@@ -39,6 +50,7 @@ namespace Aula01
 			}
 		}
 		public void moveTop(){
+			//Movimmento de cima do personagem herói
 			Top += speed;
 			
 			if(Top >= 600){
@@ -50,6 +62,7 @@ namespace Aula01
 			}
 		}
 		public void moveChao(){
+			//Movimmento para baixo do personagem herói
 			Top -= speed;
 			
 			if(Top <= 0){
