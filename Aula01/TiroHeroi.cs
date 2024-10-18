@@ -12,7 +12,7 @@ namespace Aula01
 			//Carregar imagem no MainForm
 			Load("Armas/Tiros/fireball2.gif");
 			Width = 90;
-			Height = 90;
+			Height = 30;
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
 			Parent = MainForm.telaFundo;
@@ -20,7 +20,7 @@ namespace Aula01
 
 			//Oque faz em um espaço de tempo definido
 			delay.Enabled = true;
-			delay.Interval = 40;
+			delay.Interval = 10;
 			delay.Tick += Tick;
 		}
 		Timer delay = new Timer();
@@ -30,6 +30,9 @@ namespace Aula01
 			
 			if(Left == 1200){
 				delay.Enabled = false;
+			}
+			if(Left >= 1300){
+				Dispose();
 			}
 		}
 	}
