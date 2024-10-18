@@ -26,7 +26,7 @@ namespace Aula01
 		Timer delay = new Timer();
 		
 		public void Tick(Object sender, EventArgs e){
-			Left += 7;
+			Left += 17;
 			
 			if(Left == 1200){
 				delay.Enabled = false;
