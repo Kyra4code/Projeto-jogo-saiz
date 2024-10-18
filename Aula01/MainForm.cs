@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Timers;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -15,6 +14,7 @@ namespace Aula01
 		
 		public static PictureBox telaFundo = new PictureBox();
 		
+		Timer tempo = new Timer();
 		Herói heroi = new Herói();
 		
 		void MainFormLoad(object sender, EventArgs e)
@@ -25,8 +25,8 @@ namespace Aula01
 			telaFundo.Height = this.Height;
 			telaFundo.Width = this.Width;
 			telaFundo.SizeMode = PictureBoxSizeMode.StretchImage;
-			
 		}
+		
 		void MainFormKeyDown(object sender, KeyEventArgs e)
 		{
 			//Configuração da interação das teclas com o executável

@@ -34,6 +34,7 @@ namespace Aula01
 			if(Left >= 1300){
 				Dispose();
 			}
+			
 		}
 	}
 }
