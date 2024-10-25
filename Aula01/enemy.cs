@@ -19,27 +19,10 @@ namespace Aula01
 			Top = 10;
 			movimeto.Enabled = true;
 			movimeto.Interval = 100;
-			movimeto.Tick += movTop;
 		}
 		
-		void movTop(object sender, EventArgs e){
-			if(Top == 10){
-				movimeto.Tick -= movTop;
-				movimeto.Tick += movChao;
-			}
-			Top -= 20;
-		}
-		void movChao(object sender, EventArgs e){
-			if(Top == 300){
-				movimeto.Tick -= movChao;
-				movimeto.Tick += movTop;
-			}
-			Top += 20;
-		}
 		
 		Timer movimeto = new Timer();
 		Timer tiro = new Timer();
-		
-		
 	}
 }

@@ -20,7 +20,7 @@ namespace Aula01
 		Timer tempoCarga = new Timer();
 		Herói heroi = new Herói();
 		ProgressBar balas = new ProgressBar();
-		enemy inimigo = new enemy();
+		public static enemy inimigo = new enemy();
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
@@ -40,6 +40,7 @@ namespace Aula01
 		void tempinho(Object sender, EventArgs e){
 			balas.Value = 100;
 		}
+
 		
 		void MainFormKeyDown(object sender, KeyEventArgs e)
 		{
