@@ -10,12 +10,17 @@ namespace Aula01
 		public MainForm()
 		{
 			InitializeComponent();
+			tempoCarga.Enabled = true;
+			tempoCarga.Tick += tempinho;
+			tempoCarga.Interval = 5000;
 		}
 		
 		public static PictureBox telaFundo = new PictureBox();
 		
-		Timer tempo = new Timer();
+		Timer tempoCarga = new Timer();
 		Herói heroi = new Herói();
+		ProgressBar balas = new ProgressBar();
+		enemy inimigo = new enemy();
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
@@ -25,6 +30,15 @@ namespace Aula01
 			telaFundo.Height = this.Height;
 			telaFundo.Width = this.Width;
 			telaFundo.SizeMode = PictureBoxSizeMode.StretchImage;
+			balas.Height = 35;
+			balas.Width = 200;
+			balas.Top = 500;
+			balas.Parent = telaFundo;
+			balas.Value = 100;
+		}
+		
+		void tempinho(Object sender, EventArgs e){
+			balas.Value = 100;
 		}
 		
 		void MainFormKeyDown(object sender, KeyEventArgs e)
@@ -42,9 +56,13 @@ namespace Aula01
 			else if(e.KeyCode == Keys.W){
 				heroi.moveChao();
 			}
-			
 			if(e.KeyCode == Keys.Space){
+				try{
+				if(balas.Value != 0){
 				heroi.tiroH();
+				balas.Value -= 25;
+				}
+				}catch{}
 			}
 		}
 		

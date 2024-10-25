@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="enemy.cs" />
     <Compile Include="Personagem.cs" />
     <Compile Include="Herói.cs" />
     <Compile Include="MainForm.cs" />

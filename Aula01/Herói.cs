@@ -14,8 +14,8 @@ namespace Aula01
 			Width = 70;
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
+			Parent = MainForm.telaFundo;
 		}
-
 
 		public void tiroH(){
 			//Uma instância herói é carregada e configurada.
