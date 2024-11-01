@@ -16,7 +16,12 @@ namespace Aula01
 			BackColor = Color.Transparent;
 			Parent = MainForm.telaFundo;
 		}
-
+		
+		public void morte(){
+			Left = 9000;
+			this.Dispose();
+		}
+		
 		public void tiroH(){
 			//Uma instância herói é carregada e configurada.
 			TiroHeroi th = new TiroHeroi();

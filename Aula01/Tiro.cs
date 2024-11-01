@@ -23,16 +23,22 @@ namespace Aula01
 			delay.Interval = 10;
 			delay.Tick += Tick;
 		}
+		
 		Timer delay = new Timer();
+		public int dano = 10;
+		public int direcao = 0;
 		
 		public void Tick(Object sender, EventArgs e){
-			Left += 17;
+			Left += 10;
 			
-			if(Left == 1200){
+			if(Left > MainForm.telaFundo.Width ||  Left <= 0){
 				delay.Enabled = false;
-			}
-			if(Left >= 1300){
 				Dispose();
+			}
+			
+			if(this.Bounds.IntersectsWith(MainForm.inimigo.Bounds)){
+				MainForm.inimigo.morte();
+				this.Dispose();
 			}
 		}
 	}

@@ -18,9 +18,9 @@ namespace Aula01
 		public static PictureBox telaFundo = new PictureBox();
 		
 		Timer tempoCarga = new Timer();
-		Herói heroi = new Herói();
+		public static Herói heroi = new Herói();
 		ProgressBar balas = new ProgressBar();
-		public static enemy inimigo = new enemy();
+		public static Enemy inimigo = new Enemy();
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
