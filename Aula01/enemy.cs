@@ -20,6 +20,9 @@ namespace Aula01
 			tiro.Enabled = true;
 			tiro.Tick += tiroI;
 			tiro.Interval = 900;
+			movimeto.Interval = 5;
+			movimeto.Tick += movimentacao;
+			movimeto.Enabled = true;
 		}
 		public void morte(){
 			Left -= 9000;
@@ -29,6 +32,21 @@ namespace Aula01
 		
 		Timer movimeto = new Timer();
 		Timer tiro = new Timer();
+		public int direcao = 0;
+		
+		public void movimentacao(Object sender, EventArgs e){
+			if(direcao == 1 ){
+				Top -= 5;
+			}else if (direcao == 0){
+				Top += 5;
+			}
+			
+			if (this.Top > 300){
+			    direcao = 0;
+			}else if (this.Top  < 100){
+				direcao = 1;
+			}
+		}
 		
 		public void tiroI(Object sender, EventArgs e){
 			TiroEnemy tiroi = new TiroEnemy();

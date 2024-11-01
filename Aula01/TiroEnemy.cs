@@ -30,9 +30,9 @@ namespace Aula01
 				Left += 10;
 			}
 			if(this.Left < 0){
-				this.Dispose();
+				this.destruir();
 			}
-			if(Bounds.IntersectsWith(MainForm.heroi.Bounds)){
+			if(this.Bounds.IntersectsWith(MainForm.heroi.Bounds)){
 				MainForm.heroi.morte();
 				this.destruir();
 			}
