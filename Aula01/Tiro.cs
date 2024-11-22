@@ -26,19 +26,24 @@ namespace Aula01
 		
 		Timer delay = new Timer();
 		public int dano = 10;
-		public int direcao = 0;
+		int direcao = 0;
+		
+		public void destruir(){
+			Left = 9000;
+			Dispose();
+		}
 		
 		public void Tick(Object sender, EventArgs e){
 			Left += 10;
 			
 			if(Left > MainForm.telaFundo.Width ||  Left <= 0){
 				delay.Enabled = false;
-				Dispose();
+				destruir();
 			}
 			
 			if(this.Bounds.IntersectsWith(MainForm.inimigo.Bounds)){
 				MainForm.inimigo.morte();
-				this.Dispose();
+				destruir();
 			}
 		}
 	}

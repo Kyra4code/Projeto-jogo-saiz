@@ -10,8 +10,8 @@ namespace Aula01
 		public Enemy()
 		{
 			Load("Personagens/Dragão/dragonEsq2.gif");
-			Height = 200;
-			Width = 200;
+			Height = 100;
+			Width = 100;
 			Parent = MainForm.telaFundo;
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
@@ -52,7 +52,7 @@ namespace Aula01
 			tiroi.Left = Left + 70;
 			tiroi.Top = Top + 10;
 			if(tiroi.Bounds.IntersectsWith(MainForm.heroi.Bounds)){
-				tiroi.Dispose();
+				tiroi.destruir();
 			}
 		}
 	}

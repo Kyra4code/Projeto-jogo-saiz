@@ -33,6 +33,7 @@ namespace Aula01
 				this.destruir();
 			}
 			if(this.Bounds.IntersectsWith(MainForm.heroi.Bounds)){
+				MainForm.heroi.hpHeroi -= 200;
 				MainForm.heroi.morte();
 				this.destruir();
 			}
