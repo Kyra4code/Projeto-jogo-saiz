@@ -12,7 +12,7 @@ namespace Aula01
 			InitializeComponent();
 			tempoCarga.Enabled = true;
 			tempoCarga.Tick += tempinho;
-			tempoCarga.Interval = 5000;
+			tempoCarga.Interval = 6500;
 		}
 		
 		public static PictureBox telaFundo = new PictureBox();
@@ -32,13 +32,16 @@ namespace Aula01
 			telaFundo.SizeMode = PictureBoxSizeMode.StretchImage;
 			balas.Height = 35;
 			balas.Width = 200;
+			balas.Maximum = 3;
 			balas.Top = 500;
 			balas.Parent = telaFundo;
-			balas.Value = 100;
+			balas.Value = 3;
 		}
 		
 		void tempinho(Object sender, EventArgs e){
-			balas.Value = 100;
+			if(balas.Value == 0){
+				balas.Value = 3;
+			}
 		}
 
 		
@@ -61,7 +64,7 @@ namespace Aula01
 				try{
 				if(balas.Value != 0){
 				heroi.tiroH();
-				balas.Value -= 25;
+				balas.Value -= 1;
 				}
 				}catch{}
 			}
