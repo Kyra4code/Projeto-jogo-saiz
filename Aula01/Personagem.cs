@@ -20,7 +20,6 @@ namespace Aula01
 		
 		//Todo personagem que herdar de personagem terá esses dados disponíveis para uso
 		public	int hp = 100;
-		public	int xp = 0;
 		public	int ataque = 15;
 		public	int defesa = 10;
 		public	int speed = 20;

@@ -17,9 +17,14 @@ namespace Aula01
 			Parent = MainForm.telaFundo;
 		}
 		
+		public int hpHeroi = 300;
+	
+		
 		public void morte(){
+			if(hpHeroi <= 0 ){
 			Left = 9000;
-			this.Dispose();
+			Dispose();
+			}
 		}
 		
 		public void tiroH(){
@@ -35,7 +40,7 @@ namespace Aula01
 			Left += speed;
 			
 			if(Left >= 1300){
-				Left = 0;
+				Left = 1150;
 			}
 			if(direcao == 1){
 				direcao = 1 ;

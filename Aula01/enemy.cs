@@ -10,8 +10,8 @@ namespace Aula01
 		public Enemy()
 		{
 			Load("Personagens/Dragão/dragonEsq2.gif");
-			Height = 200;
-			Width = 200;
+			Height = 100;
+			Width = 100;
 			Parent = MainForm.telaFundo;
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
@@ -24,26 +24,24 @@ namespace Aula01
 			movimeto.Tick += movimentacao;
 			movimeto.Enabled = true;
 		}
+		
+		Timer movimeto = new Timer();
+		Timer tiro = new Timer();
+		int direcao = 1;
+		
 		public void morte(){
 			Left -= 9000;
 			this.Dispose();
 			tiro.Tick -= tiroI;
 		}
 		
-		Timer movimeto = new Timer();
-		Timer tiro = new Timer();
-		public int direcao = 0;
-		
 		public void movimentacao(Object sender, EventArgs e){
-			if(direcao == 1 ){
-				Top -= 5;
-			}else if (direcao == 0){
-				Top += 5;
-			}
+			Top += speed * direcao;
 			
-			if (this.Top > 300){
-			    direcao = 0;
-			}else if (this.Top  < 100){
+			if(Top >= 600){
+				direcao = -1;
+			}
+			else if(Top <= 0){
 				direcao = 1;
 			}
 		}
@@ -54,7 +52,7 @@ namespace Aula01
 			tiroi.Left = Left + 70;
 			tiroi.Top = Top + 10;
 			if(tiroi.Bounds.IntersectsWith(MainForm.heroi.Bounds)){
-				tiroi.Dispose();
+				tiroi.destruir();
 			}
 		}
 	}
