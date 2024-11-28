@@ -38,3 +38,11 @@ C:\Users\aluno\Documents\Nova pasta\Projeto-jogo-saiz\Aula01\bin\Debug\Aula01.ex
 C:\Users\aluno\Documents\Nova pasta\Projeto-jogo-saiz\Aula01\bin\Debug\Aula01.exe
 C:\Users\aluno\Documents\Nova pasta\Projeto-jogo-saiz\Aula01\bin\Debug\Aula01.pdb
 C:\Users\aluno\Documents\Nova pasta\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.pdb
+C:\Users\Kyra\Documents\Escola\Etec\DS2\Projeto-jogo-saiz\Aula01\bin\Debug\Aula01.exe.config
+C:\Users\Kyra\Documents\Escola\Etec\DS2\Projeto-jogo-saiz\Aula01\bin\Debug\Aula01.exe
+C:\Users\Kyra\Documents\Escola\Etec\DS2\Projeto-jogo-saiz\Aula01\bin\Debug\Aula01.pdb
+C:\Users\Kyra\Documents\Escola\Etec\DS2\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.csprojResolveAssemblyReference.cache
+C:\Users\Kyra\Documents\Escola\Etec\DS2\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.MainForm.resources
+C:\Users\Kyra\Documents\Escola\Etec\DS2\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.csproj.GenerateResource.Cache
+C:\Users\Kyra\Documents\Escola\Etec\DS2\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.exe
+C:\Users\Kyra\Documents\Escola\Etec\DS2\Projeto-jogo-saiz\Aula01\obj\Debug\Aula01.pdb

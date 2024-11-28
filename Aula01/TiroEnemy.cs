@@ -22,20 +22,21 @@ namespace Aula01
 		}
 		Timer delay = new Timer();
 		public int direcao = 1;
+		int speed = 20;
 		
 		public void tickTiro(Object sender, EventArgs e){
-			if(direcao == 1){
-				Left -= 10;
-			}else if(direcao == 0){
-				Left += 10;
-			}
-			if(this.Left < 0){
-				this.destruir();
+			Left -= speed * direcao;
+			if(Left < 0){
+				destruir();
 			}
 			if(this.Bounds.IntersectsWith(MainForm.heroi.Bounds)){
-				MainForm.heroi.hpHeroi -= 200;
+				if(MainForm.heroi.hpHeroi < 199){
+					MainForm.heroi.hpHeroi = 0;
+				}else{
+					MainForm.heroi.hpHeroi -= 200;
+				}
 				MainForm.heroi.morte();
-				this.destruir();
+				destruir();
 			}
 		}
 		

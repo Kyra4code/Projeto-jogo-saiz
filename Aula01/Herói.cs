@@ -15,9 +15,24 @@ namespace Aula01
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
 			Parent = MainForm.telaFundo;
+			checkVida.Enabled = true;
+			checkVida.Tick += timerCheckVida;
+			checkVida.Interval = 200;
 		}
 		
 		public int hpHeroi = 300;
+		Label vida = new Label();
+		Label damage = new Label();
+		Label def = new Label();
+		Timer checkVida = new Timer();
+		
+		public void timerCheckVida(Object sender, EventArgs e){
+			vida.Parent = MainForm.telaFundo;
+			vida.Text = "vida: " + hpHeroi;
+			vida.BackColor = Color.Transparent;
+			vida.ForeColor = Color.White;
+			vida.Top = 600;
+		}
 	
 		
 		public void morte(){

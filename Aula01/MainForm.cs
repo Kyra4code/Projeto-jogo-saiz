@@ -21,9 +21,7 @@ namespace Aula01
 		public static Herói heroi = new Herói();
 		ProgressBar balas = new ProgressBar();
 		public static Enemy inimigo = new Enemy();
-		Label vida = new Label();
-		Label damage = new Label();
-		Label def = new Label();
+		Button restart = new Button();
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
@@ -33,25 +31,27 @@ namespace Aula01
 			telaFundo.Height = this.Height;
 			telaFundo.Width = this.Width;
 			telaFundo.SizeMode = PictureBoxSizeMode.StretchImage;
-			vida.Parent = MainForm.telaFundo;
-			vida.Text = "Vida: " + heroi.hpHeroi;
-			vida.Top = 550;
-			vida.Height = 35;
-			vida.Width = 35;
-			vida.Left = 0;
 			balas.Height = 35;
 			balas.Width = 200;
 			balas.Maximum = 3;
 			balas.Top = 500;
 			balas.Parent = telaFundo;
 			balas.Value = 3;
+			restart.Parent = telaFundo;
+			restart.Width = 120;
+			restart.Height = 40;
+			restart.Text = "Reiniciar aplicação";
+			restart.Left = 200;
+			restart.MouseClick += restartApp;
 		}
 		
 		void tempinho(Object sender, EventArgs e){
-			vida.Text = "Vida: " + heroi.hpHeroi;
 			if(balas.Value == 0){
 				balas.Value = 3;
 			}
+		}
+		void restartApp(Object sender, EventArgs e){
+			Application.Restart();
 		}
 
 		

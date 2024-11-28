@@ -34,7 +34,7 @@ namespace Aula01
 		}
 		
 		public void Tick(Object sender, EventArgs e){
-			Left += 10;
+			Left += 15;
 			
 			if(Left > MainForm.telaFundo.Width ||  Left <= 0){
 				delay.Enabled = false;
@@ -42,6 +42,7 @@ namespace Aula01
 			}
 			
 			if(this.Bounds.IntersectsWith(MainForm.inimigo.Bounds)){
+				MainForm.inimigo.hpEnemy -= 120;
 				MainForm.inimigo.morte();
 				destruir();
 			}
