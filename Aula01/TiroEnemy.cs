@@ -33,7 +33,7 @@ namespace Aula01
 				if(MainForm.heroi.hpHeroi < 199){
 					MainForm.heroi.hpHeroi = 0;
 				}else{
-					MainForm.heroi.hpHeroi -= 200;
+					MainForm.heroi.hpHeroi -= MainForm.inimigo.damageEnemy - MainForm.heroi.defHeroi;
 				}
 				MainForm.heroi.morte();
 				destruir();

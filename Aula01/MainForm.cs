@@ -22,12 +22,13 @@ namespace Aula01
 		ProgressBar balas = new ProgressBar();
 		public static Enemy inimigo = new Enemy();
 		Button restart = new Button();
+		int cenario = 0;
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
 			//Carregamento e configuração do Background
 			telaFundo.Parent = this;
-			telaFundo.Load("Cenarios/cenario0.gif");
+			telaFundo.Load("Cenarios/cenario"+cenario+".gif");
 			telaFundo.Height = this.Height;
 			telaFundo.Width = this.Width;
 			telaFundo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -48,6 +49,11 @@ namespace Aula01
 		void tempinho(Object sender, EventArgs e){
 			if(balas.Value == 0){
 				balas.Value = 3;
+			}
+			if(inimigo.hpEnemy <= 0){
+				if(heroi.Left >= 900){
+					cenario += 1;
+				}
 			}
 		}
 		void restartApp(Object sender, EventArgs e){

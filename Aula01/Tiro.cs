@@ -25,7 +25,6 @@ namespace Aula01
 		}
 		
 		Timer delay = new Timer();
-		public int dano = 10;
 		int direcao = 0;
 		
 		public void destruir(){
@@ -42,7 +41,7 @@ namespace Aula01
 			}
 			
 			if(this.Bounds.IntersectsWith(MainForm.inimigo.Bounds)){
-				MainForm.inimigo.hpEnemy -= 120;
+				MainForm.inimigo.hpEnemy -= MainForm.heroi.dano - MainForm.inimigo.defEnemy;
 				MainForm.inimigo.morte();
 				destruir();
 			}
